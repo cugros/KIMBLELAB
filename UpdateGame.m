@@ -1,6 +1,6 @@
 function [ new_locations ] = UpdateGame( locations, die_value, player )
 %UpdateGame changes the location for player by die_value
-    [tmp , piece] = min(locations(:, player));
+    [~ , piece] = min(locations(:, player));
     move = [ 0
              0
              0
