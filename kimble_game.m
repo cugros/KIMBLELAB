@@ -4,6 +4,9 @@
 %   start = 0
 %   goal = 28 to 31
 
+% We add some initial values
+die = 0;
+
 locations = - ones(4);
 player = 1; % index of current player.
 
@@ -11,8 +14,8 @@ player = 1; % index of current player.
 hits = zeros(4, 1);
 
 while true
-    % player = mod(player, 4) + 1;
-    die = CastDie(0);
+    player = mod(player, 4) + 1;
+    die = CastDie(die);
     locations = UpdateGame(locations, die, player);
     locations
     

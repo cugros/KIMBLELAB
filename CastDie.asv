@@ -12,9 +12,8 @@ function [ nextFace ] = CastDie( previousFace )
             nextFace= previousFace;
         elseif (X<0.40)
             nextFace = 7 - previousFace;
-    % We calculate the adjacent faces 
         elseif (X<0.55)
-            nextFace = abs(7-2*previousFace);
+            nextFace = abs(7-2*previousFace); % We cal
         elseif (X<0.70)
             nextFace = 7 - abs(7-2*previousFace);
         elseif (X<0.85)
