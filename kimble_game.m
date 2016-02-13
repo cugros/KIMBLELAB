@@ -4,6 +4,9 @@
 %   start = 0
 %   goal = 28 to 31
 
+% We add some initial values
+die = 0;
+
 locations = - ones(4);
 player = 0; % index of current player.
 
@@ -14,8 +17,13 @@ h = figure;
 axis([-1 1 -1 1]);
 
 while true
+<<<<<<< HEAD
     player = mod(player, 4) + 1
     die = CastDie(0);
+=======
+    player = mod(player, 4) + 1;
+    die = CastDie(die);
+>>>>>>> refs/remotes/origin/master
     locations = UpdateGame(locations, die, player);
     locations
     
